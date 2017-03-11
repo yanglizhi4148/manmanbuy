@@ -1,0 +1,170 @@
+body {
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  border: 1px solid #e6e6e6;
+  font-family: '΢���ź�';
+}
+body .banner {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+}
+body .banner .log {
+  width: 75%;
+  height: 50px;
+  margin-left: 5px;
+}
+body .banner .log a {
+  display: block;
+  width: 240px;
+  height: 25px;
+  padding: 12px;
+}
+body .banner .log a img {
+  max-width: 186px;
+  height: 25px;
+}
+body .banner .appdown {
+  padding: 7px;
+}
+body .banner .appdown a {
+  display: block;
+}
+body .banner .appdown a img {
+  width: 34px;
+  height: 34px;
+}
+body .search {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+}
+body .search .search1 {
+  height: 30px;
+  margin: 9px 15px;
+  line-height: 30px;
+}
+body .search .search1 input {
+  border: none;
+  line-height: 30px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+body .search .search1 > input:first-child {
+  background-color: #f1f1f1;
+  width: 78%;
+  padding-left: 5%;
+}
+body .search .search1 > input:last-child {
+  width: 63px;
+  background-color: #ff841d;
+  color: #fff;
+}
+body .login {
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 260px;
+}
+body .login div {
+  width: 100%;
+  padding: 10px 10px 0;
+}
+body .login .name input {
+  height: 36px;
+  width: 100%;
+  padding-left: 5px;
+  font-size: 14px;
+  line-height: 36px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-color: #aaa;
+}
+body .login .pwd input {
+  height: 36px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 36px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-color: #aaa;
+}
+body .login .submit input {
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  border-radius: 5px;
+  background-color: #ff9000;
+  border-bottom: 1px solid #bababa;
+}
+body .login p {
+  height: 36px;
+  line-height: 36px;
+  padding-left: 10px;
+  font-size: 14px;
+  padding-top: 5px;
+  color: #000;
+}
+body .login p input {
+  vertical-align: middle;
+}
+body .login .tip {
+  padding: 40px 10px 0;
+  font-size: 13px;
+  color: #888;
+}
+body .login .blank {
+  width: 100%;
+  height: 20px;
+  background-color: #f1f1f1;
+}
+body .foot {
+  width: 100%;
+  background-color: #EFEFEF;
+  padding-top: 30px;
+  padding-bottom: 140px;
+}
+body .foot .foot-top {
+  margin-top: 10px;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+body .foot .foot-top > a:nth-of-type(-n+2) {
+  box-sizing: border-box;
+  float: left;
+  width: 30%;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+}
+body .foot .foot-top > a:last-child {
+  box-sizing: border-box;
+  float: right;
+  width: 40%;
+  text-align: center;
+  font-size: 14px;
+}
+body .foot .foot-top > a:last-child img {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 2px;
+}
+body .foot .footer {
+  height: 60px;
+  text-align: center;
+}
+body .foot .footer p {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+body .foot .footer p > a:first-child {
+  color: red;
+}

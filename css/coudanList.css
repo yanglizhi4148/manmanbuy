@@ -1,0 +1,306 @@
+.layout {
+  max-width: 640px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #F1F1F1;
+}
+.layout .topPart {
+  width: 100%;
+}
+.layout .topPart header {
+  height: 45px;
+  background-color: #FF8B00;
+  position: relative;
+  box-shadow: 0px 2px 3px #ddd;
+}
+.layout .topPart header .left {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 13px;
+  left: 18px;
+}
+.layout .topPart header .left a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../images/arrow.svg") no-repeat;
+}
+.layout .topPart header .center {
+  font-size: 20px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+}
+.layout .topPart nav {
+  width: 100%;
+  height: 37px;
+  background: #fff;
+  border-bottom: 1px solid #DADADA;
+  position: relative;
+}
+.layout .topPart nav > ul {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-right: 46px;
+}
+.layout .topPart nav > ul > li {
+  width: 33%;
+  float: left;
+}
+.layout .topPart nav > ul > li a {
+  font-size: 16px;
+  text-align: center;
+  line-height: 37px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.layout .topPart nav > ul > li a i {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../images/arrowdown.svg") no-repeat;
+  background-size: 24px 24px;
+  background-position: center center;
+}
+.layout .topPart nav > ul > li.on > a > i {
+  background: url("../images/arrowup.svg") no-repeat;
+  background-size: 24px 24px;
+  background-position: center center;
+}
+.layout .topPart nav > .search {
+  position: absolute;
+  right: 0;
+  width: 47px;
+  height: 100%;
+  border-left: 1px solid #DADADA;
+  padding-left: 13px;
+  padding-top: 8px;
+}
+.layout .topPart nav > .search i {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url("../images/search.svg") no-repeat;
+  background-size: 22px 22px;
+  background-position: center center;
+}
+.layout .topPart nav > .search.on i {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url("../images/cha.svg") no-repeat;
+  background-size: 22px 22px;
+  background-position: center center;
+}
+.layout .topPart nav .shop > ul {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 37px;
+}
+.layout .topPart nav .shop > ul li {
+  width: 100%;
+  background-color: #fff;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  border-bottom: 1px solid #E8E8E8;
+  position: relative;
+}
+.layout .topPart nav .shop > ul li a {
+  display: block;
+  font-size: 16px;
+}
+.layout .topPart nav .shop > ul li.active:after {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url('../images/gou.svg');
+}
+.layout .topPart nav .area ul {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 37px;
+}
+.layout .topPart nav .area ul li {
+  width: 100%;
+  background-color: #fff;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  border-bottom: 1px solid #E8E8E8;
+  position: relative;
+}
+.layout .topPart nav .area ul li a {
+  display: block;
+  font-size: 16px;
+}
+.layout .topPart nav .area ul li.active:after {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url('../images/gou.svg');
+}
+.layout .topPart nav .allPrice ul {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 37px;
+}
+.layout .topPart nav .allPrice ul li {
+  width: 100%;
+  background-color: #fff;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  border-bottom: 1px solid #E8E8E8;
+  position: relative;
+}
+.layout .topPart nav .allPrice ul li a {
+  display: block;
+  font-size: 16px;
+}
+.layout .topPart nav .allPrice ul li.active:after {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url('../images/gou.svg');
+}
+.layout .topPart nav .searchBox {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #f7f7f7;
+}
+.layout .topPart nav .searchBox .form {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 45px;
+}
+.layout .topPart nav .searchBox .form input {
+  width: 100%;
+  padding: 0 26px;
+  height: 35px;
+  font-size: 14px;
+  border: 1px solid #eee;
+  background: url('../images/search2.svg') 7px 9px no-repeat;
+  background-color: #fff;
+  background-size: 16px 16px;
+}
+.layout .topPart nav .searchBox .form .smt {
+  width: 40px;
+  height: 100%;
+  position: absolute;
+  font-size: 15px;
+  top: 5px;
+  right: -2px;
+}
+.layout .topPart nav .searchBox .sort {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.layout .topPart nav .searchBox .sort p {
+  padding-left: 10px;
+}
+.layout .topPart nav .searchBox .sort ul {
+  margin-bottom: 0;
+  padding-right: 10px;
+}
+.layout .topPart nav .searchBox .sort ul li {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 22%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #E8E8E8;
+  border-radius: 3px;
+}
+.layout .topPart nav .searchBox .sort ul li a {
+  display: block;
+}
+.layout .topPart nav .searchBox .sort ul li.active {
+  background-color: #ff9501;
+}
+.layout .topPart nav .searchBox .sort ul li.active a {
+  color: #fff;
+}
+.layout .topPart nav .searchBox .line {
+  border-bottom: 1px solid #E8E8E8;
+}
+.layout .product {
+  width: 100%;
+  background-color: #F1F1F1;
+}
+.layout .product ul {
+  margin-top: 5px;
+  width: 100%;
+  background-color: #F1F1F1;
+}
+.layout .product ul li {
+  width: 50%;
+  float: left;
+  padding: 5px;
+}
+.layout .product ul li a {
+  width: 100%;
+  display: block;
+  background-color: #fff;
+}
+.layout .product ul li a img {
+  width: 100%;
+  height: 197px;
+}
+.layout .product ul li a .title {
+  color: #333;
+  padding: 0 6px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  height: 14px;
+  line-height: 14px;
+  overflow: hidden;
+}
+.layout .product ul li a .price {
+  padding: 5px;
+  margin-bottom: 0;
+  color: #f8601d;
+  font: 20px '微软雅黑';
+}
+.layout .product ul li a .price span {
+  font-size: 10px;
+}
+.layout .fixed {
+  max-width: 640px;
+  min-width: 320px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}

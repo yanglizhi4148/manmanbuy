@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+        initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/gsproduct.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+</head>
+<body>
+<div class="layout">
+    <div class="topPart">
+        <header>
+            <!--顶部栏-->
+            <div class="left">
+                <a href="../index.html"></a>
+            </div>
+            <div class="center">
+                凑单品
+            </div>
+        </header>
+        <nav>
+            <!--导航条按钮-->
+            <ul class="lisPar">
+                <li id="shopBtn">
+                    <a href="">京东<i></i>
+                    </a>
+                </li>
+                <li id="areaBtn">
+                    <a href="">华北<i></i>
+                    </a>
+                </li>
+                <li id="priceBtn">
+                    <a href="javascript:;">全部价格<i></i>
+                    </a>
+                </li>
+            </ul>
+            <div id="searchBtn" class="search">
+                <i></i>
+            </div>
+            <!--隐藏的下拉列表-->
+            <div class="hideBox">
+                <div class="shop clearfix">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="area clearfix">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="allPrice clearfix">
+                    <ul>
+                        <li class="active"><a href="javascript:;">全部价格</a></li>
+                        <li><a href="javascript:;">1-3元</a></li>
+                        <li><a href="javascript:;">3-5元</a></li>
+                        <li><a href="javascript:;">5-元</a></li>
+                        <li><a href="javascript:;">10-15元</a></li>
+                        <li><a href="javascript:;">15元以上</a></li>
+
+                    </ul>
+                </div>
+                <div class="searchBox">
+                    <div class="form">
+                        <input type="search" placeholder="搜索您想要的凑单品"/>
+
+                        <div class="smt">搜索</div>
+                    </div>
+                    <div class="sort">
+                        <p>排序</p>
+                        <ul class="clearfix">
+                            <li class="active"><a href="javascript:;">销量</a></li>
+                            <li><a href="javascript:;">价格↑</a></li>
+                            <li><a href="javascript:;">价格↓</a></li>
+                        </ul>
+                    </div>
+                    <div class="line"></div>
+                    <div class="sort">
+                        <p>分类</p>
+                        <ul class="clearfix">
+                            <li class="active"><a href="javascript:;">全部</a></li>
+                            <li><a href="javascript:;">家居</a></li>
+                            <li><a href="javascript:;">数码</a></li>
+                            <li><a href="javascript:;">办公</a></li>
+                            <li><a href="javascript:;">个护</a></li>
+                            <li><a href="javascript:;">食品</a></li>
+                            <li><a href="javascript:;">母婴</a></li>
+                            <li><a href="javascript:;">服饰</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--商品展示块-->
+    <div class="product">
+        <ul class="clearfix">
+
+        </ul>
+    </div>
+
+</div>
+
+
+<!--模板-->
+<script type="text/template" id="shopTpl">
+    {{each list}}
+    <li><a href="javascript:void(0);" data-shopid="{{$value.shopId}}">{{$value.shopName}}</a></li>
+    {{/each}}
+</script>
+
+<script type="text/template" id="areaTpl">
+    {{each list}}
+    <li><a href="javascript:void(0);" data-areaid="{{$value.areaId}}">{{$value.areaName}}</a></li>
+    {{/each}}
+</script>
+
+<script type="text/template" id="productTpl">
+    {{each list}}
+    <li>
+        <!--src="{{$value.productImg}}"-->
+        <a href="javascript:;">
+            <img data-original='{{$value.productImg}}' class='lazy' alt=""/>
+
+            <p class='title'>{{$value.productName}}</p>
+
+            <p class="price"><span>¥</span>{{slice($value.productPrice)}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<script src="../lib/jquery-lazyload/jquery.lazyload.js"></script>
+<script src="../js/gsproduct.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+body{
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  border:1px solid #e6e6e6;
+  font-family: '微软雅黑';
+  //顶部通栏
+  .banner{
+    height: 50px;
+    background-color: #ff841d;
+    border-bottom: 1px solid #e6e6e6;
+    .log{
+      width: 75%;
+      height: 50px;
+      margin-left: 5px;
+      a{
+        display: block;
+        width: 240px;
+        height: 25px;
+        padding: 12px;
+        img{
+          max-width: 186px;
+          height: 25px;
+        }
+      }
+    }
+    .appdown{
+      padding: 7px;
+      a{
+        display: block;
+        img{
+          width: 34px;
+          height: 34px;
+        }
+      }
+    }
+  }
+  //搜索栏
+  .search {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+    .search1 {
+      height: 30px;
+      margin: 9px 15px;
+      line-height: 30px;
+      input {
+        border: none;
+        line-height: 30px;
+        border-radius: 15px;
+        font-size: 16px;
+      }
+      > input:first-child {
+        background-color: #f1f1f1;
+        width: 78%;
+        padding-left: 5%;
+      }
+      > input:last-child {
+        width: 63px;
+        background-color: #ff841d;
+        color: #fff;
+      }
+    }
+  }
+  //菜单栏
+  .menu{
+    width: 100%;
+    .row{
+      margin: 16px 0px;
+      >div:nth-last-child(-n+4){
+        display: none;
+      }
+      .item{
+        width: 25%;
+        text-align: center;
+        img{
+          width: 50px;
+        }
+      }
+    }
+
+  }
+  //超值折扣
+  .discount{
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    padding: 0 10px;
+    color:#fff;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #ff9000;
+    border-bottom: 1px solid #ffc881;
+    img{
+      float:right;
+      width: 20px;
+      height: 20px;
+      margin-top: 8px;
+    }
+  }
+  //商品列表
+  .list{
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    margin: 0 auto;
+    border-bottom: 1px solid #EFEFEF;
+    ul{
+      li{
+        padding: 14px 8px;
+        width: 100%;
+        height: 150px;
+        a{
+          display: block;
+          .pic{
+            width: 110px;
+            float:left;
+            display: inline-block;
+            img{
+              width: 100px;
+              height: 100px;
+            }
+          }
+          .info{
+            width: 60%;
+            height: 130px;
+            float:right;
+            position: relative;
+            .tittle{
+              font-size: 14px;
+              line-height: 24px;
+              span:first-child{
+                color:#000;
+              }
+              span:last-child{
+                color:#ff6c00;
+              }
+            }
+            .other{
+              height: 24px;
+              width: 100%;
+              position: absolute;
+              left: 0;
+              bottom: 8px;
+              span{
+                color:#a1a1a1;
+                font-size: 12px;
+                font-family: '微软雅黑';
+                display: inline-block;
+                margin-bottom: 10px;
+              }
+              .comment{
+                height: 24px;
+                position: absolute;
+                right: 0px;
+                .icon-comment{
+                  display: inline-block;
+                  width: 16px;
+                  height: 15px;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //更多信息
+  .more-bar{
+    width: 100%;
+    height: 55px;
+    background-color: #F7F7F7;
+    padding-top: 10px;
+    a{
+      display: block;
+      height: 30px;
+      border:1px solid #dddddd;
+      background-color: #f4f4f4;
+      margin:0 10px;
+      border-radius: 4px;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+  //品牌排行
+  .rank{
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    padding: 0 10px;
+    color:#fff;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #ff9000;
+    border-bottom: 1px solid #ffc881;
+    img{
+      float:right;
+      width: 20px;
+      height: 20px;
+      margin-top: 8px;
+    }
+  }
+  //底部
+  .foot{
+    width: 100%;
+    background-color: #EFEFEF;
+    .foot-top{
+      margin-top: 10px;
+      width: 100%;
+      height: 34px;
+      line-height: 34px;
+      border-top: 1px solid #c4c4c4;
+      border-bottom: 1px solid #c4c4c4;
+      >a:nth-of-type(-n+2){
+        box-sizing: border-box;
+        float: left;
+        width: 30%;
+        text-align: center;
+        font-size: 14px;
+        border-right: 1px solid #c4c4c4;
+      }
+      >a:last-child{
+        box-sizing: border-box;
+        float: right;
+        width: 40%;
+        text-align: center;
+        font-size: 14px;
+        img{
+          width: 15px;
+          height: 15px;
+          vertical-align: middle;
+          margin-top: -5px;
+          margin-right: 2px;
+        }
+      }
+    }
+    .footer{
+      height: 60px;
+      text-align: center;
+      p{
+        margin-top: 15px;
+        margin-bottom: 0;
+        >a:first-child{
+          color:red;
+        }
+      }
+    }
+  }
+}

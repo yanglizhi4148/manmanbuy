@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商城导航--慢慢买</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../css/sitenav.css"/>
+    <link rel="Shortcut Icon" href="../images/logo.png" />
+</head>
+<body>
+<!--头部-->
+<div class="head clearfix" id='top'>
+    <div class="back">
+        <a href="../index.html">
+            <img src="../images/back.png" alt=""/>
+        </a>
+    </div>
+    <p>商城导航</p>
+    <div class="appdown">
+        <a href="javascript:;">
+            <img src="../images/banner_app.png" alt="手机App下载"/>
+        </a>
+    </div>
+</div>
+<!--链接-->
+<div class="link clearfix" id='link'>
+    <!--链接的坑-->
+</div>
+<!--导航-->
+<div class="nav">
+    <a href="../index.html">首页</a>
+    &nbsp;>&nbsp;
+    <a href="#link">商城</a>
+</div>
+<!--底部-->
+<div class="foot">
+    <div class="foot-top">
+        <a href="login.html">登录</a>
+        <a href="reg.html">注册</a>
+        <a href="#top">
+            <img src="../images/top.jpg" alt=""/>
+            返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="../index.html">慢慢买手机版</a>
+            --掌上比价平台
+        </p>
+        <span>
+            m.manmanbuy.com
+        </span>
+    </div>
+</div>
+</body>
+<!--链接的模板-->
+<script id='linkTpl' type='text/tpl'>
+    <div class="more">
+        {{each result as value i}}
+        <a href="{{value.navHref}}" id="{{value.navId}}">
+            <img src="{{value.navImg}}" alt=""/>
+            {{value.navTitle}}
+        </a>
+        {{/each}}
+    </div>
+</script>
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<script src='../js/sitenav.js'></script>
+</html>

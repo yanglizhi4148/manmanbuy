@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--第三方的样式-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <!--引用公共的样式-->
+    <link rel="stylesheet" href="../css/public.css">
+    <!--引用自己的样式-->
+    <link rel="stylesheet" href="../css/brand.css">
+</head>
+
+<body>
+<!--顶部通栏-->
+<div class="banner clearfix" id="top">
+    <div class="log f_left">
+        <a href="javascript:;">
+            <img src="../images/banner_logo.png" alt=""/>
+        </a>
+    </div>
+    <div class="appdown f_right">
+        <a href="javascript:;">
+            <img src="../images/load.png" alt="手机App下载"/>
+        </a>
+    </div>
+</div>
+<!--搜索框-->
+<div class="search clearfix">
+    <div class="search1">
+        <input type="text" class="f_left" placeholder="请输入你想比价的商品"/>
+        <input class="f_right" type="submit" value="搜索"/>
+    </div>
+</div>
+    <from action=''method='post'id='brandForm'>
+        <!--头部nav-->
+        <div class="nav">
+            <div class="nav_title">
+                <a href="../index.html">首页</a>
+                >
+                <a href="JavaScript:;">品牌大全</a>
+            </div>
+
+            <!--热门hot_brand-->
+            <div class='hot'>
+                <div class="hot_b">
+                    热门品牌排行
+                </div>
+            </div>
+        </div>
+        <!--品牌详情detail-->
+        <div id="detail_b"style="padding:0px 10px">
+
+        </div>
+    </from>
+
+</body>
+
+<!--首页菜单模版-->
+<script   type="text/html" id="getbrandTitleTpl" >
+    {{each result as value i}}
+    <div class="f_l"data-id="{{value.brandTitleId}}">
+        <a href="getbrand.html?id={{ value.brandTitleId }}">{{value.brandTitle}}</a>
+    </div>
+    {{/each}}
+</script>
+
+<!--引用jq-->
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!--引用template-->
+<script src="../lib/artTemplate/template.js"></script>
+
+<!--引用自己的js-->
+<script src='../js/getbrandtitle/getbrandTitle.js'></script>
+</html>

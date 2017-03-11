@@ -1,0 +1,142 @@
+.container{
+  width: 100%;
+  max-width: 780px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+//头部
+.header {
+  width: 100%;
+  height: 45px;
+  background-color: #FF841D;
+  display: inline-block;
+  position: relative;
+  a {
+    > span {
+      position: absolute;
+      font-size: 30px;
+      font-family: Consolas;
+      line-height: 45px;
+      display: inline-block;
+      top: 0;
+      left: 16px;
+    }
+  }
+  > h1 {
+    width: 100%;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 45px;
+    text-align: center;
+    color: white;
+  }
+  a:nth-of-type(2) {
+    display: block;
+    width: 65px;
+  }
+  > .app {
+    position: absolute;
+    right: 10px;
+    margin-left: 30px;
+    height: 45px;
+    top: 0;
+  }
+}
+
+//内容
+.cu-content{
+  margin-top: 15px;
+  >.title {
+    span {
+      font-size: 18px;
+      font-weight: 900;
+    }
+    p{
+      color: #FF450E;
+      font-size: 14px;
+      font-weight: bold;
+      padding:10px 0;
+    }
+  }
+  .info{
+  color: #666;
+  }
+  .content{
+    width: 100%;
+    img{
+      width: 90px;
+      height: 90px;
+    }
+    .conn{
+      >div{
+        text-align: center;
+        width: 720px;
+        height: 260px;
+        left: 50%;
+        right: -130px;
+      }
+      p{
+        line-height: 26px;
+      }
+      img{
+        width: 260px;
+        height: 260px;
+        text-align: center;
+      }
+    }
+  }
+  .pl{
+    color: #1B79FF;
+  }
+  .golink{
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    border-radius: 4px;
+    background-color: #FF9000;
+    text-align: center;
+    a{
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+}
+
+//定位下载连接图
+.download {
+  z-index: 99;
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  img {
+    width: 68px;
+    height: 70px;
+  }
+}
+//底部横条
+.line{
+  border-bottom: solid #ddd 1px;
+  border-top: solid #ddd 1px;
+  height: 36px;
+  line-height: 36px;
+  background-color:#F3F3F3;
+}
+//底部连接
+.footer_link{
+  margin-top: 30px;
+  a{
+    background-color:#F3F3F3;
+  }
+}
+.footer{
+  height: 65px;
+  text-align: center;
+  padding-top: 15px;
+  background-color:#F3F3F3 ;
+  span{
+    color: #E92345;
+  }
+  i,p{
+    color: #666;
+  }
+}

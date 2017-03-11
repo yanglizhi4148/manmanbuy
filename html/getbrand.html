@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!--第三方的样式-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <!--引用公共的样式-->
+    <link rel="stylesheet" href="../css/public.css">
+    <!--引用自己的样式-->
+    <link rel="stylesheet" href="../css/brand.css">
+</head>
+
+<body>
+
+<div class="banner clearfix" id="top">
+    <div class="log f_left">
+        <a href="javascript:;">
+            <img src="../images/banner_logo.png" alt=""/>
+        </a>
+    </div>
+    <div class="appdown f_right">
+        <a href="javascript:;">
+            <img src="../images/banner_app.png" alt="手机App下载"/>
+        </a>
+    </div>
+</div>
+<!--搜索框-->
+    <from action=''method='post'id='brandForm'>
+        <!--头部nav-->
+        <div class="nav" >
+            <!--导航坑-->
+        </div>
+
+        <!--十大品牌sortlist-->
+        <div class='sortlist'>
+            <ul class="sortlist_title">
+                <!--十大品牌列表坑-->
+            </ul>
+        </div>
+
+        <!--品牌销量-->
+        <div class="bandrank">
+            <div class="hd">
+                <!--品牌销量标题坑-->
+            </div>
+            <ul class="prolist">
+                <!--品牌销量坑-->
+            </ul>
+        </div>
+
+        <!--品牌最新评论-->
+        <div class="commont">
+            <div class="hd">
+                <!--品牌最新评论标题坑-->
+            </div>
+            <ul class="pllist">
+                <!--品牌最新评论坑-->
+
+            </ul>
+        </div>
+    </from>
+
+</body>
+
+<!--模板-->
+<!--十大品牌标题模板-->
+<script type="text/html" id="brandTpl" >
+    <div class="nav_title">
+        <a href="../index.html">首页</a>
+        >
+        <a href="brandTitle.html">品牌大全</a>
+        >
+        <a href="">
+            {{retGBK1(brandTitle)}}哪个牌子好
+        </a>
+    </div>
+    <div class="model">
+        <h3>{{retGBK1(brandTitle)}}哪个牌子好</h3>
+    </div>
+
+</script>
+
+<!--十大品牌模版-->
+<script type="text/html" id="getbrandTpl" >
+    {{each result as value i}}
+         <li>
+            <a href="javaScript:;">
+                <span>{{value.brandId%10+1}}</span>
+                <div class="inner">
+                    <div class="tit">{{value.brandName}}</div>
+                    <p>{{value.brandInfo}}</p>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</script>
+<!--销量排行模板-->
+<script type="text/html"id="bandRankTpl">
+    {{each result as value i}}
+    <li>
+        <a href="">
+            <div class="pic">
+               {{#value.productImg}}
+                </div>
+            <div class="info">
+                <div class="tip" data-id="{{value.productId}}">{{value.productName}} </div>
+                <div class="price">
+                    <span>{{value.productPrice}}</span>
+                    <span class="star">
+                        <em class=star{{i+1}}></em>
+                    </span>
+                </div>
+                <div class="other">
+                    <span>{{value.productQuote}}</span>
+                    <span>全网{{value.productCom}}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<!--品牌评论-->
+<script type="text/html" id="brandcommont" >
+    {{each result as val}}
+    <li>
+        <div class="protit clearfix ">
+            <div class="pic  f_left m_right10">
+                <img src="../images/commontpic.png" alt=""/>
+            </div>
+            <div class='tit'>创维(Skyworth) 42E5ERS 42英寸 全高清 智能网络LED液晶电视</div>
+        </div>
+        <div class='plbox'>
+            <a href="javaScript:;">
+                <div class="name">
+                    {{val.comName}}
+                    <span class="star">
+                        <em></em>
+                    </span>
+                    <i>{{val.comTime}}</i>
+                </div>
+                <div class="com">{{val.comContent}}</div>
+
+            </a>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<!--十大品牌标题-->
+<script type="text/html" id="brandTpl1" >
+    <div class="model">
+        <h3>{{retGBK1(brandTitle)}}哪个牌子好</h3>
+    </div>
+</script>
+<!--十大品牌销量排行-->
+<script type="text/html" id="brandTpl2" >
+    <a href="">
+
+    </a>
+</script>
+<!--十大品牌最新品论-->
+<script type="text/html" id="brandcommontT" >
+    <div class="model">
+        <h3>{{retGBK1(brandTitle)}}最新评论</h3>
+    </div>
+</script>
+<script type="text/html" id="brandcommonTimg" >
+    <div class="model">
+        <h3>{{retGBK1(brandTitle)}}最新评论</h3>
+    </div>
+</script>
+
+<!--引用jq-->
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!--引用template-->
+<script src="../lib/artTemplate/template.js"></script>
+
+<!--引用自己的js-->
+<script src='../js/common/util.js'></script>
+<script src='../js/getbrand/get_brand.js'></script>
+
+</html>

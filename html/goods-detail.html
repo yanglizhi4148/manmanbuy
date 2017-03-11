@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>产品分类-慢慢买比价网</title>
+    <!--第三方的样式-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <!--引用公共的样式-->
+    <link rel="stylesheet" href="../css/common/retina.css"/>
+    <link rel="stylesheet" href="../css/common/wzb_public.css"/>
+
+    <!--引用自己的样式-->
+    <link rel="stylesheet" href="../css/common/wzb_common1.css"/>
+    <link rel="stylesheet" href="../css/Parity-search/goods-detail.css">
+    <link rel="stylesheet" href="../css/common/iconfont/iconfont.css"/>
+    <style>
+        .product-title {
+            position: relative;
+        }
+        .product-title > .breadcrumb {
+            margin-bottom: 0;
+        }
+        .product-title > .breadcrumb li::before {
+            content: "";
+        }
+        .product-title > .breadcrumb li:nth-of-type(-n+2)::after {
+            content: "  >";
+        }
+        .product-title > .btn {
+            position: absolute;
+            height: 30px;
+            right: 10px;
+            top: 3px;
+        }
+    </style>
+</head>
+<body>
+<!--顶部公共：------------------------------------->
+<?php include('common/wzb_common1.html')?>
+
+<div id="goods-compare">
+    <div class="product-title">
+        <ul class="breadcrumb">
+            <li><a href="../index.html" >首页</a></li>
+            <li><a href="category.html" >全部分类</a></li>
+            <li style=""></li>
+        </ul>
+        <a class="btn btn-default" href="">筛选</a>
+    </div>
+
+    <!-- 模板填充处-->
+
+</div>
+
+<!--主模板-->
+<script id="goodsDetailTpl" type="text/html">
+    {{each result as value i}}
+    <div class="product-info">
+        <!--大图详情-->
+        <div class="product-bijia">
+            <div class="product-name">
+                {{value.productName}}
+            </div>
+            <div class="product-img">
+                {{#value.productImg}}
+            </div>
+            <div class="product-collect">
+                <a href="javascript:;">
+                    <img src="http://www.zuyushop.com/wap/images/sc.jpg" width="39" height="39"></a>
+            </div>
+        </div>
+        <!--比价标题-->
+        <div class="c-tab">
+            <ul>
+
+            </ul>
+        </div>
+        <div class="plist">
+            <a href=""><button style="width: 96%;margin-left: 5px;">比价</button>
+                {{#value.bjShop}}
+            </a>
+            <a href="">
+                {{#value.bjShop}}
+            </a>
+            <div class="note">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+        </div>
+        <!--网友评价-->
+        <div class="product-com-title">
+            <div>网友评价</div>
+        </div>
+        <!--评价列表-->
+        <div class="product-com-list">
+            <ul>
+
+
+            </ul>
+            <div class="more">
+                <a class="morein" href="comment.aspx?id=473088">查看更多评价</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<!--评价模板-->
+<script type="text/html" id="comListTpl">
+    {{each result as value i}}
+    <li>
+        <div class="clearfix">
+            <span class="pull-left com-name">{{value.comName}}</span>
+            <span class="pull-right com-time">{{value.comTime}}</span>
+        </div>
+        <div class="clearfix">
+            <span class="star pull-left com-star">
+                <em class="star5"></em>
+            </span>
+            <span class="pull-right com-from">{{value.comFrom}}</span>
+        </div>
+        <div class="com-content">{{value.comContent}}</div>
+    </li>
+    {{/each}}
+</script>
+
+<!--底部公共------------------------------------>
+<?php include('common/wzb_common2.html')?>
+</body>
+<!--引用jq-->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引用template-->
+<script src="../lib/artTemplate/template.js"></script>
+<!--引用自己的js-->
+<script src="../js/Parity-search/Parity-search-common.js"></script>
+<script src="../js/Parity-search/goods-detail.js"></script>
+</html>

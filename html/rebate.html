@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>海淘折扣首页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="../css/common/public.css">
+    <link rel="stylesheet" href="../css/save&discount/moneyctrl.css">
+    <script src="../js/save&discount/less.js"></script>
+
+</head>
+<div class="header">
+    <a name="top" id="top" class="back-link" href="http://m.manmanbuy.com/">
+        <span> &lt;</span>
+    </a>
+    <h1>海淘折扣</h1>
+    <a class="app" href="http://m.manmanbuy.com/?o=download">
+        <img src="resources/images/r1.png" alt="">
+    </a>
+</div>
+<body>
+
+<!--超值折扣模版-->
+<script id="moneyCtrlTpl" type="text/html">
+    {{each result as value i}}
+    <div class="media container">
+        <a class="media-left" href="moneyproduct.html?productid={{value.productId}}">
+            <div class="Img">{{#value.productImgSm}}</div>
+            <div class="media-body">
+                <a href="moneyproduct.html?productid={{value.productId}}">
+                    <h5>{{value.productName}}<span>{{value.productPinkage}}</span></h5>
+                </a>
+
+                <span class="from">{{value.productFrom}}</span>
+                <span class="comment">
+              <i>
+              </i>
+              {{getNum(value.productComCount)}}
+            </span>
+            </div>
+            <hr>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<!--定位下载图标-->
+<div class="download">
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">
+        <img src="resources/images/r.png" alt=""></a>
+</div>
+<div class="loader1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<!--底部按钮-->
+<section id="moneyCtrl">
+    <div class="recommen-list">
+
+    </div>
+    <div id="bottom" class="product-page selector clearfix container">
+        <input type="button" value="上一页" id="previous" class="btn btn-default pull-left pre">
+        <input type="button" value="下一页" id="next" class="btn btn-default pull-right nex">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                第1页
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!--尾部区域-->
+<div class="line">
+    <a href="../../index.html">&nbsp;&nbsp;首页</a>
+    <span>&nbsp;&nbsp;>&nbsp;&nbsp;海淘折扣</span>
+</div>
+<div class="footer_link">
+    <row>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <a class="btn btn-default col-lg-4 col-sm-4 col-md-4 hidden-xs" href="http://m.manmanbuy.com/login.aspx">登录</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a class="btn btn-default col-lg-4 col-sm-4 col-md-4 hidden-xs" href="http://m.manmanbuy.com/reg.aspx">注册</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a class="btn btn-default col-lg-4 col-sm-4 col-md-4 hidden-xs" href="#top" target="_self">&uArr;&nbsp;返回顶部</a>
+            </div>
+        </div>
+    </row>
+</div>
+
+<div class="footer">
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><span>手机app下载</span>&nbsp;慢慢买手机版</a>&nbsp;<i>--掌上比价平台</i>
+    <p>m.manmanbuy.com</p>
+</div>
+
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<!--自己的index.js-->
+<script src="../js/save&discount/common.js"></script>
+<script src="../js/save&discount/moneyctrl.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省钱控</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common/public.css">
+    <link rel="stylesheet" href="../css/save&discount/moneyctrl.css">
+    <script src="../js/save&discount/less.js"></script>
+
+</head>
+
+<div class="header">
+    <a name="top" id="top" class="back-link" href="../index.html">
+        <span> &lt;</span>
+    </a>
+    <h1>省钱控-最新优惠</h1>
+    <a class="app" href="../index.html">
+        <img src="../images/r1.png" alt="">
+    </a>
+</div>
+<body>
+<!--超值折扣模版-->
+<script id="moneyCtrlTpl" class="container" type="text/html">
+    {{each result as value i}}
+    <div class="media container">
+        <a class="media-left" href="moneyproduct.html?productid={{value.productId}}">
+            <div class="Img">{{#value.productImgSm}}</div>
+        <div class="media-body">
+            <a href="moneyproduct.html?productid={{value.productId}}">
+                <h5>{{value.productName}}<span>{{value.productPinkage}}</span></h5>
+                </a>
+
+                <span class="from">{{value.productFrom}} | {{value.productTime}}</span>
+                <span class="comment">
+              <i>
+              </i>
+              {{getNum(value.productComCount)}}
+            </span>
+            </div>
+
+        <hr>
+        </a>
+    </div>
+
+    {{/each}}
+
+</script>
+<!--定位下载图标-->
+<div class="download">
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">
+        <img src="resources/images/r.png" alt=""></a>
+</div>
+<div class="loader1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<!--底部按钮-->
+<section id="moneyCtrl">
+    <div class="recommen-list">
+
+    </div>
+    <div class="product-page clearfix container">
+        <div class="dropdown">
+            <input class="pre btn btn-default dropdown-toggle" type="button" value=" 我是按钮" >
+
+            </input>
+        </div>
+        <div class="dropdown">
+            <button class="nex btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown">
+                下一页
+                <span class="caret"></span>
+            </button>
+            <!--<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">-->
+            <!--</ul>-->
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+                第1页
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!--尾部区域-->
+<div class="line">
+    <a href="../index.html">&nbsp;&nbsp;首页</a>
+    <span>&nbsp;&nbsp;>&nbsp;&nbsp;省钱控</span>
+</div>
+<div class="footer_link">
+    <row>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <a class="btn btn-default col-lg-4 col-sm-4 col-md-4 hidden-xs" href="login.html">登录</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a class="btn btn-default col-lg-4 col-sm-4 col-md-4 hidden-xs" href="reg.html">注册</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a class="btn btn-default col-lg-4 col-sm-4 col-md-4 hidden-xs" href="#top" target="_self">&uArr;&nbsp;返回顶部</a>
+            </div>
+        </div>
+    </row>
+</div>
+
+<div class="footer">
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><span>手机app下载</span>&nbsp;慢慢买手机版</a>&nbsp;<i>--掌上比价平台</i>
+    <p>m.manmanbuy.com</p>
+</div>
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<!--自己的index.js-->
+<script src="../js/save&discount/common.js"></script>
+<script src="../js/save&discount/moneyctrl.js"></script>
+</body>
+</html>

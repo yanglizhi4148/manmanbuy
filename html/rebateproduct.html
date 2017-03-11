@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>海淘折扣</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--第三方的css-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <!--自己的less样式-->
+    <link rel="stylesheet/less" href="../css/common/public.css">
+    <link rel="stylesheet/less" href="../css/save&discount/moneyproduct.css">
+    <!--less.js-->
+    <script src="../js/save&discount/less.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <a name="top" id="top" class="back-link" href="../index.html">
+        <span> &lt;</span>
+    </a>
+    <h1>国内折扣</h1>
+    <a class="app" href="http://m.manmanbuy.com/?o=download">
+        <img src="resources/images/r1.png" alt="">
+    </a>
+</div>
+<section id="moneyproduct">
+    <main id="recommen-product" class="money-product">
+
+    </main>
+</section>
+<div class="line">
+    <a href="http://m.manmanbuy.com/">&nbsp;&nbsp;首页</a>
+    <span>&nbsp;&nbsp;>&nbsp;&nbsp;省钱控</span>
+</div>
+<div class="footer_link">
+    <row>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <a class="btn btn-default col-lg-4 col-sm-4 col-md-4 hidden-xs" href="http://m.manmanbuy.com/login.aspx">登录</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a class="btn btn-default col-lg-4 col-sm-4 col-md-4 hidden-xs" href="http://m.manmanbuy.com/reg.aspx">注册</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a class="btn btn-default col-lg-4 col-sm-4 col-md-4 hidden-xs" href="#top" target="_self">&uArr;&nbsp;返回顶部</a>
+            </div>
+        </div>
+    </row>
+</div>
+
+<div class="footer">
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><span>手机app下载</span>&nbsp;慢慢买手机版</a>&nbsp;<i>--掌上比价平台</i>
+    <p>m.manmanbuy.com</p>
+</div>
+
+
+<!--第三方js-->
+<script type="text/html" id="moneyProductTpl">
+    {{each result as value i}}
+    <div class="container">
+        <div class="cu-content">
+            <h3 class="title"><span>{{value.productName}}</span>
+                <p>{{value.productPinkage}}</p>
+            </h3>
+            <h4></h4>
+            <div class="info">
+                <span class="mall">{{value.productForm}}</span>
+                <span class="addtime" style="margin-right: 4px;">{{value.productTime}}</span>
+                <span class="author">{{value.productTips}}</span>
+                <a href="#" class="pl">{{value.productComCount}}</a>
+            </div>
+            <div class="content clearfix">
+                <div class="picwrap">
+                    {{#value.productImgSm}}
+                </div>
+                <div class="conn">
+                    <!--内容开始-->
+                    <p>{{value.productInfo}}</p>
+                    <!--<div>{{#value.productImg}}</div>-->
+                    <p>{{#value.productInfo1}}</p>
+                    <p>{{#value.productInfo3}}</p>
+                    <div>{{#value.productImg2}}</div>
+                </div>
+                <center>
+                    <div class="area">
+                        <span class="s">
+                            <a href="javascript:;" style=" display:none;"><font id="fqy">广东</font><i class="iconfont">+</i></a>
+              			<div class="drop" style="display: block;">
+                    </div>
+                    </span>
+                        <strong id="fqy_yh" style=" display:none;">有货</strong>
+                    </div>
+                </center>
+                <div class="golink">
+                    <a href="http://139.199.157.195:9090/api/getmoneyctrl">前往购买</a>
+                </div>
+                <hr>
+            </div>
+            <div style="text-align: center; margin: 20px 10px;">
+                <img src="resources/images/mmbweixin2.png" style="width: 100%; height: auto;">
+            </div>
+            <div class="cu-content-pl ui-border-t">
+                {{#value.productComment}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<div class="download">
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">
+        <img src="resources/images/r.png" alt=""></a>
+</div>
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<!--自己的index.js-->
+<script src="../js/save&discount/common.js"></script>
+<script src="../js/save&discount/moneyproduct.js"></script>
+</body>
+</html>

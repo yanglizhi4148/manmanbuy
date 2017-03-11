@@ -1,0 +1,342 @@
+body {
+  min-width: 320px;
+  max-width: 640px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid #e6e6e6;
+  font-family: '微软雅黑';
+}
+body .banner {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+}
+body .banner .log {
+  width: 75%;
+  height: 50px;
+  margin-left: 5px;
+}
+body .banner .log a {
+  display: block;
+  width: 240px;
+  height: 25px;
+  padding: 12px;
+}
+body .banner .log a img {
+  max-width: 186px;
+  height: 25px;
+}
+body .banner .appdown {
+  padding: 7px;
+}
+body .banner .appdown a {
+  display: block;
+}
+body .banner .appdown a img {
+  width: 34px;
+  height: 34px;
+}
+.search {
+  width: 100%;
+  height: 40px;
+}
+.search .search1 {
+  height: 30px;
+  margin: 9px 15px;
+  line-height: 30px;
+}
+.search .search1 input {
+  border: none;
+  line-height: 30px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+.search .search1 > input:first-child {
+  background-color: #f1f1f1;
+  width: 88%;
+  padding-left: 5%;
+}
+.search .search1 > input:last-child {
+  width: 63px;
+  background-color: #ff841d;
+  color: #fff;
+}
+#brandForm {
+  background-color: #eee;
+  /*头部nav开始*/
+  /*热门详情*/
+  /*品牌详情detail_b*/
+}
+#brandForm .nav {
+  /*十大品牌model*/
+}
+#brandForm .nav .nav_title {
+  height: 36px;
+  line-height: 36px;
+  padding-left: 9px;
+  font-size: 14px;
+  border-top: 2px solid #EBEBEB;
+  border-bottom: 1px solid #CCCCCC;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+}
+#brandForm .model {
+  background: #f3f3f3;
+  border: 1px solid #c8c8c8;
+  border-left: none;
+  border-right: none;
+  color: #874604;
+}
+#brandForm .model h3 {
+  line-height: 36px;
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  padding-left: 9px;
+}
+#brandForm .hot {
+  background-color: #eee;
+  padding: 10px 5px;
+}
+#brandForm .hot .hot_b {
+  font-size: 16px;
+  color: #874604;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 9px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+#brandForm #detail_b {
+  background-color: #eee;
+  margin-bottom: 0px;
+}
+#brandForm #detail_b > .f_l a {
+  height: 40px;
+  background: url("../img/arrow1.gif") right center no-repeat;
+  line-height: 40px;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  padding-left: 0;
+  border-bottom: 1px solid #ccc;
+}
+/*十大品牌sortlist*/
+.sortlist {
+  background-color: #eee;
+}
+.sortlist ul {
+  margin-bottom: 0px;
+}
+.sortlist ul li {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px 10px 0px 10px;
+  background: url("../img/sortlist.svg") right center no-repeat;
+  background-size: 20px 20px;
+}
+.sortlist ul li > a {
+  display: block;
+}
+.sortlist ul li > a > span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: #c9c9c9;
+  color: #ffffff;
+  line-height: 20px;
+  vertical-align: top;
+  margin: 0 10px 0 0;
+  font-size: 14px;
+}
+.sortlist ul li > a > .inner {
+  display: inline-block;
+}
+.sortlist ul li > a > .inner > .tit {
+  color: black;
+  font-size: 16px;
+}
+.sortlist ul li > a > .inner > p {
+  font-size: 12px;
+  color: #999999;
+  margin-top: 3px;
+}
+.sortlist ul > li:nth-of-type(1) span {
+  background: #f10e0e;
+}
+.sortlist ul > li:nth-of-type(2) span {
+  background: #ff9314;
+}
+.sortlist ul > li:nth-of-type(3) span {
+  background: #8adf5b;
+}
+/*销量排行*/
+.bandrank {
+  background-color: #eee;
+}
+.bandrank .hd {
+  background: #f3f3f3;
+  border: 1px solid #c8c8c8;
+  border-left: none;
+  border-right: none;
+  color: #874604;
+}
+.bandrank .hd h3 {
+  line-height: 36px;
+  font-size: 14px;
+  padding-left: 10px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.bandrank .hd h3 a {
+  color: #874604;
+}
+.bandrank .prolist {
+  margin-bottom: 0;
+  background: #eee;
+}
+.bandrank .prolist li {
+  list-style: none;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px;
+}
+.bandrank .prolist li a {
+  display: block;
+}
+.bandrank .prolist li a .pic {
+  float: left;
+  margin-right: 10px;
+}
+.bandrank .prolist li a .pic img {
+  width: 100px;
+  height: 100px;
+}
+.bandrank .prolist li a .info {
+  font-size: 14px;
+  line-height: 24px;
+}
+.bandrank .prolist li a .info .tip {
+  color: #333333;
+  line-height: 22px;
+  min-height: 44px;
+  word-break: break-all;
+}
+.bandrank .prolist li a .info span {
+  color: #F00;
+}
+.bandrank .prolist li a .info .price {
+  height: 25px;
+  margin-top: 4px;
+}
+.bandrank .prolist li a .info .price span {
+  font-size: 18px;
+  color: #ea3900;
+  vertical-align: middle;
+  float: left;
+}
+.bandrank .prolist li a .info .price .star {
+  float: right;
+  margin-top: -4px;
+  background-image: url("../img/star.svg");
+  display: inline-block;
+  width: 90px;
+  height: 18px;
+  vertical-align: middle;
+}
+.bandrank .prolist li a .info .price .star .star1,
+.bandrank .prolist li a .info .price .star .star2,
+.bandrank .prolist li a .info .price .star .star3,
+.bandrank .prolist li a .info .price .star .star4 {
+  background-image: url('../img/star1.svg');
+  display: inline-block;
+  width: 70px;
+  height: 18px;
+}
+.bandrank .prolist li a .info .price .star .star2,
+.bandrank .prolist li a .info .price .star .star4 {
+  width: 90px;
+}
+.bandrank .prolist li a .info .other {
+  font-size: 12px;
+}
+.bandrank .prolist li a .info .other > span {
+  margin-right: 10px;
+  color: #999999;
+}
+/*品牌评论*/
+.commont {
+  background: #eee;
+}
+.commont .pllist {
+  margin-bottom: 0;
+}
+.commont .pllist li {
+  list-style: none;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px;
+}
+.commont .pllist li a {
+  display: block;
+  margin-bottom: 5px;
+}
+.commont .pllist li a .protit {
+  margin-bottom: 10px;
+}
+.commont .pllist li a .protit .pic {
+  float: left;
+  margin-right: 10px;
+}
+.commont .pllist li a .protit .tit {
+  color: #999999;
+  line-height: 22px;
+  font-size: 14px;
+  word-break: break-all;
+}
+.commont .pllist li .plbox {
+  background: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #e7e7e7;
+  position: relative;
+}
+.commont .pllist li .plbox ::before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 29px;
+  top: -8px;
+  border-bottom: 8px solid #e7e7e7;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.commont .pllist li .plbox a {
+  display: block;
+}
+.commont .pllist li .plbox a .name {
+  color: #4f6900;
+  font-size: 14px;
+}
+.commont .pllist li .plbox a .name .star {
+  margin-top: -4px;
+  background-image: url("../img/star1.svg");
+  display: inline-block;
+  width: 90px;
+  height: 18px;
+  vertical-align: middle;
+}
+.commont .pllist li .plbox a .name i {
+  color: #999999;
+  float: right;
+  font-style: normal;
+}
+.commont .pllist li .plbox .com {
+  color: #000000;
+  margin-top: 10px;
+  line-height: 22px;
+  font-size: 15px;
+  word-break: break-all;
+}

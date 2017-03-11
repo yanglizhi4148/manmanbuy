@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>产品分类-慢慢买比价网</title>
+    <!--第三方的样式-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <!--引用公共的样式-->
+    <link rel="stylesheet" href="../css/common/retina.css"/>
+    <link rel="stylesheet" href="../css/common/wzb_public.css"/>
+
+    <!--引用自己的样式-->
+    <link rel="stylesheet" href="../css/common/wzb_common1.css"/>
+    <link rel="stylesheet" href="../css/Parity-search/classify-list.css">
+    <link rel="stylesheet" href="../css/common/iconfont/iconfont.css"/>
+</head>
+<body>
+    <!--顶部公共：----------------------------->
+    <?php include('common/wzb_common1.html')?>
+
+    <!--分类标题及其列表-->
+    <form name="aspnetForm" method="post" action="" id="aspnetForm">
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDczMTA4MTM0ZGRa51+0NovUJXaOz9fpxMPYRIM0UQ==">
+        </div>
+
+
+        <div class="brief">
+            <div class="briefin" style="background: #ebebeb">
+                <!--分类标题的坑-->
+                <!--分类列表的坑-->
+            </div>
+        </div>
+    </form>
+
+    <!--分类标题模板-->
+    <script type="text/tpl" id="classifyTpl">
+        {{ each result as value i }}
+            <div class="fl_t" style="position:relative">
+                <i class="iconfont icon-{{ value.titleId }}" style="position:absolute;top:6px;left:2px;color:darkorange"></i>
+                <a href="##" value="{{ value.titleId }}">{{ value.title }}</a>
+            </div>
+        {{ /each }}
+    </script>
+    <!--分类列表模板-->
+    <script type="text/tpl" id="classifyListTpl">
+        <div class="fl_all clearfix" >
+            {{ each result as value i }}
+                 <div class="col-sm-4 col-xs-4">
+                    <a href="goods-list.html?categoryid={{value.categoryId}}&category={{value.category}}" value="{{ value.categoryId }}">{{ value.category }}</a>
+                 </div>
+            {{ /each }}
+        </div>
+    </script>
+
+    <!--底部公共-->
+    <?php include('common/wzb_common2.html')?>
+</body>
+
+
+<!--引用jq-->
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引用template-->
+<script src="../lib/artTemplate/template.js"></script>
+<!--引用自己的js-->
+<script src="../js/Parity-search/classify-list.js"></script>
+
+</html>

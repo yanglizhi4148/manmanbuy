@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>慢慢买比价网--手机版</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../css/reg.css"/>
+    <link rel="Shortcut Icon" href="../images/logo.png" />
+</head>
+<body>
+<!--顶部通栏-->
+<div class="banner clearfix" id="top">
+    <div class="log f_left">
+        <a href="../index.html">
+            <img src="../images/banner_logo.png" alt=""/>
+        </a>
+    </div>
+    <div class="appdown f_right">
+        <a href="javascript:;">
+            <img src="../images/banner_app.png" alt="手机App下载"/>
+        </a>
+    </div>
+</div>
+<!--搜索框-->
+<div class="search clearfix">
+    <div class="search1">
+        <input type="text" class="f_left" placeholder="请输入你想比价的商品"/>
+        <input class="f_right" type="submit" value="搜索"/>
+    </div>
+</div>
+<!--中间部分-->
+<div class="main">
+    <table class="tab">
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" class="score" id='one' value='请输入用户名'/>
+                    <p id='p1'>用户名不能为空，请输入!</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id='two' class="score" value='密码(6-20个字符)'/>
+                    <p id='p2'>密码不能为空，请输入!</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id='three' class="score" value='请输入手机号'/>
+                    <p id='p3'></p>
+                </td>
+            </tr>
+            <tr>
+                <td class='pic'>
+                    <img src="../images/code.jpg" alt="验证码"/>
+                    <input type="text" class='blank'/>
+                    <input type="button" class='button' value='获取手机验证码'/>
+                    <p id='p4'>正在检测验证码是否有效</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id='four' class="score" value='请输入手机验证码'/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="five" class="score" value='请输入邮箱'/>
+                    <p id='p5'>邮箱不能为空，请输入!</p>
+                </td>
+            </tr>
+            <tr>
+                <td class='reg'>
+                    <input type="submit" value='注册' class="score"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!--底部-->
+<div class="foot">
+    <div class="foot-top">
+        <a href="login.html">登录</a>
+        <a href="#top">注册</a>
+        <a href="#top">
+            <img src="../images/top.jpg" alt=""/>
+            返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="../index.html">慢慢买手机版</a>
+            --掌上比价平台
+        </p>
+        <span>
+            m.manmanbuy.com
+        </span>
+    </div>
+</div>
+</body>
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<script src='../js/reg.js'></script>
+</html>

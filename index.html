@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>慢慢买比价网--手机版</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/public.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="Shortcut Icon" href="./images/logo.png" />
+</head>
+<body>
+<!--顶部通栏-->
+<div class="banner clearfix" id="top">
+    <div class="log f_left">
+        <a href="javascript:;">
+            <img src="images/banner_logo.png" alt=""/>
+        </a>
+    </div>
+    <div class="appdown f_right">
+        <a href="javascript:;">
+            <img src="images/banner_app.png" alt="手机App下载"/>
+        </a>
+    </div>
+</div>
+<!--搜索框-->
+<div class="search clearfix">
+    <div class="search1">
+        <input type="text" class="f_left" placeholder="请输入你想比价的商品"/>
+        <input class="f_right" type="submit" value="搜索"/>
+    </div>
+</div>
+<!--菜单栏-->
+<div class="menu">
+    <div class="row">
+        <!--菜单的坑-->
+    </div>
+</div>
+<!--超值折扣-->
+<div class="discount clearfix">
+    <span class='f_left'>超值折扣推荐</span>
+    <a href="/html/moneyctrl.html">
+        <img src="images/discount_more.png" alt=""/>
+    </a>
+</div>
+<!--商品列表-->
+<div class="shop">
+    <div class="list">
+        <!--列表的坑-->
+    </div>
+</div>
+<!--更多信息-->
+<div class="more-bar">
+    <a href="/html/moneyctrl.html">更多优惠信息 >></a>
+</div>
+<!--品牌排行-->
+<div class="rank clearfix">
+    <span class='f_left'>品牌排行</span>
+    <a href="/html/brandTitle.html">
+        <img src="images/discount_more.png" alt=""/>
+    </a>
+</div>
+<!--底部-->
+<div class="foot">
+    <div class="foot-top">
+        <a href="./html/login.html">登录</a>
+        <a href="./html/reg.html">注册</a>
+        <a href="#top">
+            <img src="images/top.jpg" alt=""/>
+            返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="#top">慢慢买手机版</a>
+            --掌上比价平台
+        </p>
+        <span>
+            m.manmanbuy.com
+        </span>
+    </div>
+</div>
+</body>
+<!--菜单模板-->
+<script id="menuTpl" type="text/tpl">
+    {{each result as value i}}
+    <div class="col-xs-3 item" id="{{value.indexmenuId}}">
+        {{if value.titlehref!='#'}}
+        <a href="./html/{{value.titlehref}}">
+            {{#value.img}}
+            <p>{{value.name}}</p>
+        </a>
+        {{else}}
+        <a href="{{value.titlehref}}">
+            {{#value.img}}
+            <p>{{value.name}}</p>
+        </a>
+        {{/if}}
+    </div>
+    {{/each}}
+</script>
+<!--商品列表模板-->
+<script id='listTpl' type='text/tpl'>
+    <ul>
+        {{each result as value i}}
+        <li id='{{value.productId}}'>
+            <a href="html/moneyproduct.html?productId={{value.productId}}">
+                <div class="pic">
+                    {{#value.productImgSm}}
+                </div>
+                <div class="info">
+                    <div class="tittle">
+                        <span>{{value.productName}}</span>
+                        <span>{{value.productPinkage}}</span>
+                    </div>
+                    <div class="other">
+                        <span class="mall">{{value.productFrom+'|'}}{{value.productTime}}</span>
+                        <span class="comment">
+                            <i class="icon_comment">
+                                <img src="./images/icon-comment.svg" alt=""/>
+                            </i>
+                            {{sliceStr1(value.productComCount)}}
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="./js/index.js"></script>
+</html>

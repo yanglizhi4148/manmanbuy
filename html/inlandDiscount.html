@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>省钱快曝 -- 慢慢买</title>
+    <!--视口设置-->
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+        initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/inlandDiscount.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="Shortcut Icon" href="../images/logo.png" />
+</head>
+<body>
+<!--整体块-->
+<div class="layout">
+    
+    <!--等待加载-->
+    <div class="loading">
+        <img src="../img/loading.gif" alt=""/>
+    </div>
+    <!--头部-->
+    <header id="top">
+        <a href="../index.html" class="back"></a>
+        <h1>国内折扣</h1>
+        <a href="http://m.manmanbuy.com/?o=download" class="load"></a>
+    </header>
+    <!--产品部分-->
+    <div>
+        <div class="product">
+            <ul class="clearfix">
+                <!--产品列表的坑-->
+            </ul>
+        </div>
+    </div>
+
+    <!--固定定位的APP下载-->
+    <div class="app-load">
+        <a href="">
+            <img src="../images/app-load.png" alt=""/>
+        </a>
+    </div>
+    <!--底部部分-->
+    <div class="footer">
+        <div class="button clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;" id="backTop"><i class="glyphicon glyphicon-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="f-info">
+            <p><a href="javascript:;">&nbsp;手机app下载</a>慢慢手机版<span>——掌上比价平台</span> </p>
+            <a href="javascript:;">http://m.manmanbuy.com</a>
+        </div>
+    </div>
+</div>
+
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<script src="../js/inlandDiscount.js"></script>
+
+<!--产品列表的模板-->
+<script type="text/template" id="product-tpl">
+    {{each result as value i}}
+    <li>
+        <a href="product-ifo.html?productid={{value.productId}}" title="{{value.productName}}{{value.productPrice}}">
+            <div class="img">
+                {{#value.productImg}}
+            </div>
+            <div class="title">{{value.productName}}</div>
+            <div class="sale">{{value.productPrice}}</div>
+            <div class="info">
+                <p>{{value.productFrom}} | {{value.productTime}}</p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+
+</script>
+</body>
+</html>

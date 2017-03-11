@@ -1,0 +1,239 @@
+body {
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  border: 1px solid #e6e6e6;
+  font-family: '΢���ź�';
+}
+body .banner {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+}
+body .banner .log {
+  width: 75%;
+  height: 50px;
+  margin-left: 5px;
+}
+body .banner .log a {
+  display: block;
+  width: 240px;
+  height: 25px;
+  padding: 12px;
+}
+body .banner .log a img {
+  max-width: 186px;
+  height: 25px;
+}
+body .banner .appdown {
+  padding: 7px;
+}
+body .banner .appdown a {
+  display: block;
+}
+body .banner .appdown a img {
+  width: 34px;
+  height: 34px;
+}
+body .search {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+}
+body .search .search1 {
+  height: 30px;
+  margin: 9px 15px;
+  line-height: 30px;
+}
+body .search .search1 input {
+  border: none;
+  line-height: 30px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+body .search .search1 > input:first-child {
+  background-color: #f1f1f1;
+  width: 78%;
+  padding-left: 5%;
+}
+body .search .search1 > input:last-child {
+  width: 63px;
+  background-color: #ff841d;
+  color: #fff;
+}
+body .menu {
+  width: 100%;
+}
+body .menu .row {
+  margin: 16px 0px;
+}
+body .menu .row > div:nth-last-child(-n+4) {
+  display: none;
+}
+body .menu .row .item {
+  width: 25%;
+  text-align: center;
+}
+body .menu .row .item img {
+  width: 50px;
+}
+body .discount {
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #ff9000;
+  border-bottom: 1px solid #ffc881;
+}
+body .discount img {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+}
+body .list {
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+  margin: 0 auto;
+  border-bottom: 1px solid #EFEFEF;
+}
+body .list ul li {
+  padding: 14px 8px;
+  width: 100%;
+  height: 150px;
+}
+body .list ul li a {
+  display: block;
+}
+body .list ul li a .pic {
+  width: 110px;
+  float: left;
+  display: inline-block;
+}
+body .list ul li a .pic img {
+  width: 100px;
+  height: 100px;
+}
+body .list ul li a .info {
+  width: 60%;
+  height: 130px;
+  float: right;
+  position: relative;
+}
+body .list ul li a .info .tittle {
+  font-size: 14px;
+  line-height: 24px;
+}
+body .list ul li a .info .tittle span:first-child {
+  color: #000;
+}
+body .list ul li a .info .tittle span:last-child {
+  color: #ff6c00;
+}
+body .list ul li a .info .other {
+  height: 24px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+}
+body .list ul li a .info .other span {
+  color: #a1a1a1;
+  font-size: 12px;
+  font-family: '΢���ź�';
+  display: inline-block;
+  margin-bottom: 10px;
+}
+body .list ul li a .info .other .comment {
+  height: 24px;
+  position: absolute;
+  right: 0px;
+}
+body .list ul li a .info .other .comment .icon-comment {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  vertical-align: middle;
+}
+body .more-bar {
+  width: 100%;
+  height: 55px;
+  background-color: #F7F7F7;
+  padding-top: 10px;
+}
+body .more-bar a {
+  display: block;
+  height: 30px;
+  border: 1px solid #dddddd;
+  background-color: #f4f4f4;
+  margin: 0 10px;
+  border-radius: 4px;
+  line-height: 30px;
+  text-align: center;
+}
+body .rank {
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #ff9000;
+  border-bottom: 1px solid #ffc881;
+}
+body .rank img {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+}
+body .foot {
+  width: 100%;
+  background-color: #EFEFEF;
+}
+body .foot .foot-top {
+  margin-top: 10px;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+body .foot .foot-top > a:nth-of-type(-n+2) {
+  box-sizing: border-box;
+  float: left;
+  width: 30%;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+}
+body .foot .foot-top > a:last-child {
+  box-sizing: border-box;
+  float: right;
+  width: 40%;
+  text-align: center;
+  font-size: 14px;
+}
+body .foot .foot-top > a:last-child img {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 2px;
+}
+body .foot .footer {
+  height: 60px;
+  text-align: center;
+}
+body .foot .footer p {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+body .foot .footer p > a:first-child {
+  color: red;
+}

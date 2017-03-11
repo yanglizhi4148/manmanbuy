@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>优惠劵</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../css/lsf_coupon.css"/>
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/lsf/artTemplate-3.0.1/template.js"></script>
+
+</head>
+<body>
+<!--coupon top-->
+<section class="layout clearfix">
+    <div id="tops"></div>
+    <section class="coupon_top">
+        <a href=" coupon.html" class="coupon_left">
+            <i class="glyphicon glyphicon-menu-left"></i>
+        </a>
+        <h3>肯德基优惠劵</h3>
+        <a href="javaScript:;" class="coupon_right">
+            <i class="glyphicon glyphicon-download-alt"></i>
+            <b class="f_right">APP下载</b>
+        </a>
+</section>
+
+    <!--coupon product-->
+    <section class="coupon_product">
+        <p>-- 点餐前出示手机中的优惠劵, 即可享受优惠 --</p>
+
+        <!--肯德基图片渲染-->
+        <section id="coupon_product_model"></section>
+    </section>
+
+    <!--coupon back-->
+    <section class="coupon_back">
+        <div>
+            <a href="../index.html">首页</a> <
+            <a href="coupon.html">优惠劵</a> <
+            <a href="javaScript">肯德基优惠劵</a>
+        </div>
+    </section>
+
+    <!--coupon bottom-->
+    <section class="coupon_bottom">
+        <div>
+            <a href="login.html" class="col-xs-4 col-md-4" >登录</a>
+            <a href="reg.html" class="col-xs-4 col-md-4">注册</a>
+            <a href="#tops" class="col-xs-4 col-md-4">
+                <i class="glyphicon glyphicon-arrow-up"></i><div>返回顶部</div>
+            </a>
+        </div>
+        <p>
+            <a href="#">手机版APP</a>
+            <a href="../index.html">慢慢买手机版</a>
+            <a href="javaScript:;" class="bijia"> <i>- </i>-掌上比价平台</a>
+            <a href="../index.html" class="bottom">m.manmanbuy.com/</a>
+        </p>
+    </section>
+</section>
+<!--coupon   mask-->
+<div id="coupon_mask">
+    <!--coupon arrow-->
+
+</div>
+<!--
+<section class="coupon_arrow">
+    <div class="coupon_arrow_left">&lt</div>
+    <div class="coupon_arrow_right">&gt</div>
+</section>
+-->
+
+
+
+<script src="../js/lsf/util.js"></script>
+<script src="../js/lsf/lsf_couponproduct.js"></script>
+
+<!--模板引擎-->
+    <script type="tpl" id="coupon_product_tpl">
+        {{each result as val i}}
+             <div class="coupon_product_img " data_id = "{{val.couponProductId}}">
+                <a href="javaScript:;" class='coupon_product_a clearfix'>
+                 <i class="glyphicon glyphicon-menu-right"></i>
+                   {{#val.couponProductImg}}
+                    <div class="coupon_des">
+                        <div>{{val.couponProductName}}</div>
+                        <div>{{val.couponProductPrice}}</div>
+                        <div>{{val.couponProductTime}}</div>
+                    </div>
+                </a>
+              </div>
+      {{ /each }}
+    </script>
+<!--图片渲染模板-->
+<script type="tpl" id="coupon_mask_tpl">
+{{each}}
+    <div class="coupon_mask_box clearfix">
+      {{#couponProductImg}};
+    </div>
+{{ /each}}
+</script>
+</body>
+</html>

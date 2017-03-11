@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--<title>{{value.productName}}</title>-->
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+        initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/inlandDiscount.css"/>
+    <link rel="stylesheet" href="../css/product-ifo.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="Shortcut Icon" href="../images/logo.png" />
+</head>
+<body>
+<!--整体块-->
+<div class="layout">
+    <!--头部-->
+    <header>
+        <a href="inlandDiscount.html" class="back"></a>
+        <h1>国内折扣</h1>
+        <a href="http://m.manmanbuy.com/?o=download" class="load"></a>
+    </header>
+    <!--产品详情页部分的坑-->
+    <div class="session">
+
+    </div>
+    <!--固定定位的APP下载-->
+    <div class="app-load">
+        <a href="">
+            <img src="../images/app-load.png" alt=""/>
+        </a>
+    </div>
+    <!--底部部分-->
+    <div class="footer">
+        <div class="button clearfix">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;" id="backTop"><i class="glyphicon glyphicon-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="f-info">
+            <p><a href="javascript:;">&nbsp;手机app下载</a>慢慢手机版<span>——掌上比价平台</span> </p>
+            <a href="javascript:;">http://m.manmanbuy.com</a>
+        </div>
+    </div>
+
+</div>
+
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<script src="../js/product-ifo.js"></script>
+
+<!--title的模板-->
+<script type="text/template" id="productInfo-tpl2">
+    {{each list as value i}}
+        <title>{{value.productName}}</title>
+    {{/each}}
+</script>
+
+<!--产品详情页的模板-->
+<script type="text/template" id="productInfo-tpl">
+    {{each list as value i}}
+    <div class="container">
+        <div class="main">
+            <h3>{{value.productName}}</h3>
+            <h4>{{value.productPrice}}</h4>
+            <div class="info">
+                <span class="mall">{{value.productFrom}}</span>
+                <span class="time">{{value.productTime}}</span>
+                <span class="author">{{value.productTips}}</span>
+            </div>
+            <div class="details clearfix">
+                <div class="pic">
+                    <!--<img src="../img/details-pic.jpg" alt=""/>-->
+                    {{#value.productImg}}
+                </div>
+                <div class="con">
+                    {{value.productInfo}}
+
+                </div>
+            </div>
+            <div class="buy">
+                <a href="">前往购买</a>
+            </div>
+        </div>
+        <!--微信二维码-->
+        <div class="code-img">
+            <img src="../images/mmbweixin.png" alt=""/>
+        </div>
+        <!--评论部分-->
+        <div class="com-content">
+            {{#value.productComment}}
+        </div>
+
+    </div>
+    <!--步骤导航-->
+    <div class="nav">
+        <a href="">首页</a> &gt;
+        <a href="">超值推荐</a> &gt;
+        <a href="">{{value.productName}}</a>
+    </div>
+    {{/each}}
+</script>
+</body>
+</html>

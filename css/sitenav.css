@@ -1,0 +1,130 @@
+body {
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  font-family: '微软雅黑';
+}
+body .head {
+  width: 100%;
+  height: 45px;
+  background-color: #ff841d;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  line-height: 45px;
+}
+body .head .back {
+  width: 50px;
+  top: 0;
+  left: 0;
+}
+body .head .back a {
+  display: block;
+}
+body .head p {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  left: 40%;
+  font-size: 20px;
+  font-weight: bold;
+}
+body .head .appdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+}
+body .head .appdown a {
+  display: block;
+}
+body .head .appdown a img {
+  width: 34px;
+  height: 34px;
+}
+body .link {
+  width: 100%;
+}
+body .link .more {
+  width: 100%;
+  margin: 10px auto;
+  font-size: 14px;
+}
+body .link .more a {
+  width: 40%;
+  float: left;
+  padding: 10px 8px;
+  margin: 0 0 5px 5px;
+  display: block;
+  color: #000;
+  background-color: #f4f4f4;
+  border: 1px solid #bfbfbf;
+}
+body .link .more a img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+body .nav {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  padding-left: 8px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  background-color: #ebebeb;
+}
+body .nav a {
+  font-size: 14px;
+  color: #000;
+}
+body .foot {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #EFEFEF;
+}
+body .foot .foot-top {
+  margin-top: 10px;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+body .foot .foot-top > a:nth-of-type(-n+2) {
+  box-sizing: border-box;
+  float: left;
+  width: 30%;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+}
+body .foot .foot-top > a:last-child {
+  box-sizing: border-box;
+  float: right;
+  width: 40%;
+  text-align: center;
+  font-size: 14px;
+}
+body .foot .foot-top > a:last-child img {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 2px;
+}
+body .foot .footer {
+  height: 60px;
+  text-align: center;
+}
+body .foot .footer p {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+body .foot .footer p > a:first-child {
+  color: red;
+}
